@@ -1,0 +1,47 @@
+<div class="aligner">
+    <div class="aligner-item">
+    <mat-card>
+        <mat-card-title class="center-xs">Iniciar sesión</mat-card-title>
+        <mat-card-content>
+            <div class="row center-xs">
+                <mat-hint>¿Aún no eres miembro? <a rounterLink="/sign-up" class="sign-up-link">Registrate</a></mat-hint>
+            </div>
+            <form [formGroup]="form" (ngSubmit)="login($event)">
+                <div class="row center-xs">
+                    <mat-form-field class="col-xs-8">
+                        <input
+                            type="email"
+                            matInput
+                            placeholder="Correo electrónico"
+                            formControlName="email"
+                            />
+                    </mat-form-field>
+                </div>
+
+                <div class="row center-xs">
+                    <mat-form-field class="col-xs-8">
+                        <input
+                            type="password"
+                            matInput
+                            placeholder="Contraseña"
+                            formControlName="password"
+                            />
+                    </mat-form-field>
+                </div>
+
+                <div class="row center-xs">
+                    <button mat-raised-button class="button-login" color="primary">Ingresar</button>
+                </div>
+            </form>
+        </mat-card-content>
+        <mat-card-footer>
+                <div class="row center-xs">
+                    <mat-hint><strong>¿Olvidaste tu contraseña?</strong></mat-hint>
+                </div>
+                <div class="row center-xs">
+                    <mat-hint>No hay problema, <a routerLink="/home" class="pass-recovery">aquí te ayudamos</a></mat-hint>
+                </div>
+        </mat-card-footer>
+    </mat-card>
+    </div>
+</div>

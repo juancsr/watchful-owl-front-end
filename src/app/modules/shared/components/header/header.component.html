@@ -1,0 +1,15 @@
+<mat-toolbar>
+    <mat-toolbar-row>
+        <nav>
+            <a routerLink="/home" routerLinkActive="active" class="logo"><app-logo></app-logo></a>
+            <a mat-button routerLink="/popular" routerLinkActive="active">Popular</a>
+            <a mat-button routerLink="/buscar" routerLinkActive="active">Buscar</a>
+            <!--<a mat-button routerLink="/subscribe" routerLinkActive="active">Suscribirse</a>-->
+        </nav>
+        <div class="col-xs-offset-8">
+            <a mat-button routerLink="/auth" routerLinkActive="active" color="primary" class="button-login">
+                Ingresar
+            </a>
+        </div>
+    </mat-toolbar-row>
+</mat-toolbar>
