@@ -1,0 +1,30 @@
+.aligner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aligner-item {
+  max-width: 70%;
+  min-width: 50%;
+  align-self: center;
+  margin-top: 10%;
+}
+
+.button-login {
+    margin-top: 3%;
+    background-color: #4395E6;
+}
+
+.sign-up-link {
+    color: #679435;
+}
+
+.pass-recovery {
+    text-decorator: underline black;
+    color: #679435;
+}
+
+.mat-card-footer {
+    font: 11px;
+}

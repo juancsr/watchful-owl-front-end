@@ -4,7 +4,7 @@
         <mat-card-title class="center-xs">Iniciar sesión</mat-card-title>
         <mat-card-content>
             <div class="row center-xs">
-                <mat-hint>¿Aún no eres miembro? <a rounterLink="/sign-up" class="sign-up-link">Registrate</a></mat-hint>
+                <mat-hint>¿Aún no eres miembro? <a routerLink="/auth/sign-up" class="sign-up-link">Registrate</a></mat-hint>
             </div>
             <form [formGroup]="form" (ngSubmit)="login($event)">
                 <div class="row center-xs">
