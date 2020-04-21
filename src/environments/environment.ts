@@ -3,7 +3,10 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  aylien_api: 'https://api.aylien.com/news/',
+  api_id: '309d9917',
+  api_key: 'd7fbc452320bc9844d80f150e9540511',
 };
 
 /*
