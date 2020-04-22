@@ -9,7 +9,7 @@ import { finalize } from 'rxjs/operators';
   styleUrls: ["./stories.component.css"],
 })
 export class StoriesComponent implements OnInit {
-  anaylisis: AnalysisModel;
+  analysis: AnalysisModel;
   url: string;
   isLoading: boolean;
   analysisError: boolean;
@@ -39,7 +39,7 @@ export class StoriesComponent implements OnInit {
       .subscribe(
         (response) => {
           this.analysisError = false;
-          this.anaylisis = response;
+          this.analysis = response;
           this.assingVariables();
         },
         (error) => {
@@ -53,10 +53,10 @@ export class StoriesComponent implements OnInit {
    * Asigna las variables correspondientes para la información relevante del análisis
    */
   private assingVariables() {
-    this.title = this.anaylisis.text.split('\n')[0];
-    this.sentiment = this.anaylisis.sentiment.polarity_confidence * 100;
-    this.sentimentDescription = this.anaylisis.sentiment.polarity;
-    this.categories = this.anaylisis.classification.categories;
-    this.summary = this.anaylisis.summary.sentences;
+    this.title = this.analysis.text.split('\n')[0];
+    this.sentiment = this.analysis.sentiment.polarity_confidence * 100;
+    this.sentimentDescription = this.analysis.sentiment.polarity;
+    this.categories = this.analysis.classification.categories;
+    this.summary = this.analysis.summary.sentences;
   }
 }

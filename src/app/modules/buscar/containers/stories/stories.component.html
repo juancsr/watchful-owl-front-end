@@ -9,12 +9,12 @@
       <div class="box">
         <mat-card>
           <div class="row center-xs">
-            <h3 *ngIf="!anaylisis">
+            <h3 *ngIf="!analysis">
               Analizar artículo
             </h3>
-            <h3 *ngIf="anaylisis">Analizar artículo</h3>
+            <h3 *ngIf="analysis">Analizar artículo</h3>
           </div>
-          <div class="row center-xs help-text" *ngIf="!anaylisis">
+          <div class="row center-xs help-text" *ngIf="!analysis">
             Te ayudamos a encontrar información relevante de tus artículos,<br />
             simplemente copia y pega la URL del artículo que deseas analizar
           </div>
@@ -56,7 +56,7 @@
 </div>
 
 <div class="container">
-  <div class="row center-xs" *ngIf="anaylisis">
+  <div class="row center-xs" *ngIf="analysis && !isLoading">
     <div class="col-xs-12">
       <div class="box">
         <app-article-title [title]="title"></app-article-title>
@@ -74,12 +74,12 @@
 
     <div class="section col-xs-10">
       <div class="box">
-        <app-article-summary [summary]="summary"></app-article-summary>
+        <app-article-summary [summary]="summary" [concepts]="analysis.concepts"></app-article-summary>
       </div>
 
-      <app-article-concept [concepts]="anaylisis.concepts">
+      <!-- <app-article-concept [concepts]="analysis.concepts">
 
-      </app-article-concept>
+      </app-article-concept> -->
       <app-article-classification
           [categories]="categories"
         ></app-article-classification>
