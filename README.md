@@ -4,7 +4,7 @@ Web APP para obtener información relevante de articulos.
 # Back-end
 Puedes encontrar el back-end de está app en: https://github.com/juancsr/watchful-owl-back-end/blob/dev/README.md
 
-# WatchfulOwlFrontEnd
+## Angular CLI
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
 ## Development server
