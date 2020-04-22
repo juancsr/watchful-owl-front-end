@@ -15,9 +15,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
-import { HttpClientModule } from "@angular/common/http";
-import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
-
+import { HttpClientModule } from '@angular/common/http';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatChipsModule} from '@angular/material/chips';
 @NgModule({
   declarations: [],
   imports: [
@@ -39,6 +40,8 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
     MatStepperModule,
     HttpClientModule,
     MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatChipsModule,
   ],
   exports: [
     MatButtonModule,
@@ -57,7 +60,9 @@ import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
     MatSnackBarModule,
     MatFormFieldModule,
     MatStepperModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatChipsModule
   ],
 })
 export class MaterialModule {}

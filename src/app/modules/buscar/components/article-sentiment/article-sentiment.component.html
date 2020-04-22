@@ -1,1 +1,17 @@
-<p>article-sentiment works!</p>
+<div class="title-container row">
+    <div class="box">
+        <p>Sentimientos</p>
+    </div>
+</div>
+
+<mat-label>{{sentimentDescription}}</mat-label>
+
+<div class="row center-xs">
+    <mat-progress-bar 
+        class="col-xs-8 green-progress" 
+        mode="determinate" 
+        [value]="sentimentValue"
+        [color]="colorClass"
+        ></mat-progress-bar>
+</div>
+    

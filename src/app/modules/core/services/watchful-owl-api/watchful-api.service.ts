@@ -16,7 +16,7 @@ export class WatchfulOwlService {
    * servicio para análisis de artículo
    * @param params paramétro con la url a analizar
    */
-  getAnalysis(params: object) {
+  getAnalysis(params: object): Observable<AnalysisModel> {
     return this.http
       .post<AnalysisModel>(`${environment.watchful_owl}text-classification`, params)
       .pipe(
@@ -24,10 +24,7 @@ export class WatchfulOwlService {
         catchError((error) => {
           return this.handleError(error);
         }),
-        map((response: any) => {
-          console.log(response);
-          return response.data
-        })
+        map((response: any) => response.data)
       );
   }
 
