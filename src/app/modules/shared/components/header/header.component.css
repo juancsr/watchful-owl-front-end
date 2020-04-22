@@ -1,13 +1,15 @@
 nav > a {
-    padding: 15px;
+    margin: 15px;
     text-decoration: none;
     color: white;
 }
 nav > a.active {
-    background-color: 'yellow';
+    padding-bottom: -10px;
+    border-bottom: 4px solid #427AA1;
 }
 
 .button-login {
+    margin: 15px;
     color: black;
 }
 
