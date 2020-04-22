@@ -57,12 +57,14 @@
 
 <div class="container">
   <div class="row center-xs" *ngIf="analysis && !isLoading">
+    <!-- Titulo -->
     <div class="col-xs-12">
       <div class="box">
         <app-article-title [title]="title"></app-article-title>
       </div>
     </div>
 
+    <!-- Sentimientos -->
     <div class="section col-xs-10">
       <div class="box">
         <app-article-sentiment
@@ -72,19 +74,22 @@
       </div>
     </div>
 
+    <!-- Resumen -->
     <div class="section col-xs-10">
       <div class="box">
-        <app-article-summary [summary]="summary" [concepts]="analysis.concepts"></app-article-summary>
+        <app-article-summary
+          [summary]="summary"
+          [concepts]="analysis.concepts"
+        ></app-article-summary>
       </div>
 
-      <!-- <app-article-concept [concepts]="analysis.concepts">
-
-      </app-article-concept> -->
+      <!-- Categorías -->
       <app-article-classification
-          [categories]="categories"
-        ></app-article-classification>
-    </div>
+        [categories]="categories"
+      ></app-article-classification>
+      
+      <app-article-entity [entities]="analysis.entity"> </app-article-entity>
 
-    
+    </div>
   </div>
 </div>

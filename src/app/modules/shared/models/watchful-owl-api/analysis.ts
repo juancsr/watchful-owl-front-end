@@ -5,10 +5,10 @@ import { SentimentModel } from "./sentiment";
 import { SumaryModel } from "../sumary";
 
 export class AnalysisModel {
-    classification: ClasificationModel;
-    concepts: ConceptModel;
-    entity: EntityModel[];
-    sentiment: SentimentModel;
-    summary: SumaryModel;
-    text: string;
-}
+         classification: ClasificationModel;
+         concepts: ConceptModel;
+         entity: EntityModel;
+         sentiment: SentimentModel;
+         summary: SumaryModel;
+         text: string;
+       }

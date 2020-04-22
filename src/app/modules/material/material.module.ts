@@ -17,8 +17,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { HttpClientModule } from '@angular/common/http';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import {MatProgressBarModule} from '@angular/material/progress-bar';
-import {MatChipsModule} from '@angular/material/chips';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTreeModule } from '@angular/material/tree';
 @NgModule({
   declarations: [],
   imports: [
@@ -42,6 +43,7 @@ import {MatChipsModule} from '@angular/material/chips';
     MatProgressSpinnerModule,
     MatProgressBarModule,
     MatChipsModule,
+    MatTreeModule,
   ],
   exports: [
     MatButtonModule,
@@ -62,7 +64,8 @@ import {MatChipsModule} from '@angular/material/chips';
     MatStepperModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
-    MatChipsModule
+    MatChipsModule,
+    MatTreeModule
   ],
 })
 export class MaterialModule {}

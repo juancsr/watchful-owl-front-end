@@ -10,6 +10,7 @@ export class ArticleSummaryComponent implements OnInit {
   @Input() summary: string[];
   @Input() concepts: ConceptModel;
   summaryWithConcepts: string;
+
   constructor() {}
 
   ngOnInit() {
@@ -23,24 +24,19 @@ export class ArticleSummaryComponent implements OnInit {
   private buildSummaryWithConcept() {
     let concept = '';
     this.summary.forEach(sentence => {
-      console.log(sentence);
       let paragraph = '';
       this.summaryWithConcepts += '<p>';
       sentence.split(' ').forEach(word => {
-        // words += (word + ' ');
         concept = this.searchConcept(word);
-        console.log(word, concept);
         if (concept !== '') {
           paragraph += concept + " ";
         } else {
           paragraph += word + " ";
         }
-        // console.log(word);
       });
       this.summaryWithConcepts += paragraph;
       this.summaryWithConcepts += '</p>';
     });
-    console.log(this.summaryWithConcepts);
   }
 
   /**
