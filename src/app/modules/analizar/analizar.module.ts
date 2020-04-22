@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from "@angular/forms";
 import { CommonModule } from '@angular/common';
 import { StoriesComponent } from './containers/stories/stories.component';
-import { BuscarRoutingModule } from './buscar-routing.module';
+import { AnalizarRoutingModule } from "./analizar-routing.module";
 import { ArticleTitleComponent } from './components/article-title/article-title.component';
 import { ArticleSentimentComponent } from './components/article-sentiment/article-sentiment.component';
 import { ArticleClassificationComponent } from './components/article-classification/article-classification.component';
@@ -26,6 +26,12 @@ import { ArticleErrorComponent } from './components/article-error/article-error.
     ArticleSearchComponent,
     ArticleErrorComponent,
   ],
-  imports: [CommonModule, BuscarRoutingModule, MaterialModule, FormsModule, SharedModule],
+  imports: [
+    CommonModule,
+    AnalizarRoutingModule,
+    MaterialModule,
+    FormsModule,
+    SharedModule,
+  ],
 })
-export class BuscarModule {}
+export class AnalizarModule {}

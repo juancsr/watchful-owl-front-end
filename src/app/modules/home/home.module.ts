@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 
 import { HomeComponent } from './components/home/home.component';
+import { MaterialModule } from '../material/material.module';
 
 
 
@@ -11,7 +12,8 @@ import { HomeComponent } from './components/home/home.component';
     declarations: [HomeComponent],
   imports: [
     CommonModule,
-      HomeRoutingModule
+    HomeRoutingModule,
+    MaterialModule
   ]
 })
 export class HomeModule { }

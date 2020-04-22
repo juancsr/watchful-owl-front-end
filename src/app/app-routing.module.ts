@@ -19,8 +19,8 @@ const routes: Routes = [
 
             },
             {
-                path: 'buscar',
-                loadChildren: () => import('./modules/buscar/buscar.module').then(m => m.BuscarModule)
+                path: 'analizar',
+                loadChildren: () => import('./modules/analizar/analizar.module').then(m => m.AnalizarModule)
 
             },
             {
