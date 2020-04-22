@@ -7,7 +7,7 @@ import { LinkModel } from './link';
 import { CategoryModel } from './category';
 import { SentimentModel } from './sentiment';
 
-class StoryModel {
+export class StoryModel {
   id: number;
   title: string;
   body: string;
@@ -27,6 +27,6 @@ class StoryModel {
   links: LinkModel;
 }
 
-export class StoriesModel {
-  stories: StoryModel;
-}
+// export class StoriesModel {
+//   stories: StoryModel;
+// }

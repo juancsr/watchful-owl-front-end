@@ -1,0 +1,17 @@
+<div class="container" *ngIf="isLoading">
+    <div class="row center-xs">
+        <app-progress-spinner></app-progress-spinner>
+    </div>
+</div>
+
+<div class="stories-container">
+    <div class="row start-xs" *ngIf="!isLoading">
+        <div *ngFor="let story of stories" class="col-xs-3" style="margin: 0em;">
+            <div class="box">
+                <app-trending [title]="story.title" [author]="story.author.name" [body]="story.body" [url]="story.links.permalink"></app-trending>
+            </div>
+        </div>
+    </div>
+</div>
+
+
