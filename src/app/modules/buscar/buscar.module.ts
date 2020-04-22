@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from "@angular/forms";
 import { CommonModule } from '@angular/common';
 import { StoriesComponent } from './containers/stories/stories.component';
 import { BuscarRoutingModule } from './buscar-routing.module';
@@ -8,9 +9,23 @@ import { ArticleClassificationComponent } from './components/article-classificat
 import { ArticleEntityComponent } from './components/article-entity/article-entity.component';
 import { ArticleConceptComponent } from './components/article-concept/article-concept.component';
 import { ArticleSummaryComponent } from './components/article-summary/article-summary.component';
+import { ArticleSearchComponent } from './components/article-search/article-search.component';
+import { MaterialModule } from '../material/material.module';
+import { SharedModule } from '../shared/shared.module';
+import { ArticleErrorComponent } from './components/article-error/article-error.component';
 
 @NgModule({
-  declarations: [StoriesComponent, ArticleTitleComponent, ArticleSentimentComponent, ArticleClassificationComponent, ArticleEntityComponent, ArticleConceptComponent, ArticleSummaryComponent],
-  imports: [CommonModule, BuscarRoutingModule],
+  declarations: [
+    StoriesComponent,
+    ArticleTitleComponent,
+    ArticleSentimentComponent,
+    ArticleClassificationComponent,
+    ArticleEntityComponent,
+    ArticleConceptComponent,
+    ArticleSummaryComponent,
+    ArticleSearchComponent,
+    ArticleErrorComponent,
+  ],
+  imports: [CommonModule, BuscarRoutingModule, MaterialModule, FormsModule, SharedModule],
 })
 export class BuscarModule {}

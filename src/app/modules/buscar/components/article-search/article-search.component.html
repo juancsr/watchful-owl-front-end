@@ -1,10 +1,5 @@
-<!-- <app-article-search></app-article-search> -->
-
 <div class="container">
-  <div class="row center-xs" *ngIf="isLoading">
-    <app-progress-spinner></app-progress-spinner>
-  </div>
-  <div class="row center-xs" *ngIf="!isLoading">
+  <div class="row center-xs">
     <div class="col-xs-10">
       <div class="box">
         <mat-card>
@@ -15,7 +10,7 @@
           </div>
           <div class="row center-xs help-text">
             Te ayudamos a encontrar información relevante de tus artículos,<br />
-            simplemente copia y pega la URL del artículo que deseas analizar
+            simplemente copa y pega la URL del artículo que deseas analizar
           </div>
 
           <mat-card-content>
@@ -25,30 +20,16 @@
                   <mat-label>Pega aquí la URL del sitio web</mat-label>
                   <input
                     type="text"
-                    name="url"
                     matInput
-                    [(ngModel)]="url"
                     placeholder="Ej: https://techcrunch.com/2019/12/22/who-will-the-winners-be-in-the-future-of-fintech/"
                   />
                 </mat-form-field>
               </div>
-              <button
-                type="button"
-                mat-flat-button
-                class="button-search"
-                color="primary"
-                (click)="fetchStories()"
-              >
-                Buscar
-              </button>
+              <button mat-flat-button class="button-search" color="primary">Buscar</button>
             </form>
           </mat-card-content>
         </mat-card>
       </div>
     </div>
   </div>
-</div>
-
-<div *ngIf="anaylisis">
-  showed
 </div>

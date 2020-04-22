@@ -1,25 +1,31 @@
 import { Component, OnInit } from '@angular/core';
-import { AylienService } from '../../../core/services/aylien/aylien.service';
-import { StoriesModel } from '../../../shared/models/story';
+import { WatchfulOwlService } from "../../../core/services/watchful-owl-api/watchful-api.service";
+import { AnalysisModel } from "../../../shared/models/watchful-owl-api/analysis";
 
 @Component({
-  selector: 'app-stories',
-  templateUrl: './stories.component.html',
-  styleUrls: ['./stories.component.css'],
+  selector: "app-stories",
+  templateUrl: "./stories.component.html",
+  styleUrls: ["./stories.component.css"],
 })
 export class StoriesComponent implements OnInit {
-  private stories: StoriesModel;
+  anaylisis: AnalysisModel;
+  url: string;
+  isLoading: boolean;
 
-  constructor(private aylienService: AylienService) {}
-
-  ngOnInit() {
-    this.fetchStories();
+  constructor(private watchfulOwlService: WatchfulOwlService) {
+    this.isLoading = false;
   }
 
-  private fetchStories() {
-    this.aylienService.getAllStories().subscribe(stories => {
-      this.stories = stories;
-      console.log(this.stories);
+  ngOnInit() {
+    // this.fetchStories();
+  }
+
+  fetchStories() {
+    this.isLoading = true;
+    const params = { url: this.url }
+    this.watchfulOwlService.getAnalysis(params).subscribe(response => {
+      this.anaylisis = response;
+      this.isLoading = false;
     });
   }
 }

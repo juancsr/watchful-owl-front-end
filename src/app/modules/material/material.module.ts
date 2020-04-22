@@ -16,9 +16,10 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
 import { HttpClientModule } from "@angular/common/http";
+import { MatProgressSpinnerModule } from "@angular/material/progress-spinner";
 
 @NgModule({
-    declarations: [],
+  declarations: [],
   imports: [
     MatButtonModule,
     MatToolbarModule,
@@ -36,7 +37,8 @@ import { HttpClientModule } from "@angular/common/http";
     MatSnackBarModule,
     MatFormFieldModule,
     MatStepperModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressSpinnerModule,
   ],
   exports: [
     MatButtonModule,
@@ -54,8 +56,9 @@ import { HttpClientModule } from "@angular/common/http";
     MatListModule,
     MatSnackBarModule,
     MatFormFieldModule,
-    MatStepperModule
-  ]
+    MatStepperModule,
+    MatProgressSpinnerModule
+  ],
 })
 export class MaterialModule {}
 
