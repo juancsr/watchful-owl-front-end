@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  aylien_api: 'https://api.aylien.com/news/',
+  // aylien_api: 'https://api.aylien.com/news/',
+  aylien_api: '/news/',
   api_id: '309d9917',
   api_key: 'd7fbc452320bc9844d80f150e9540511',
 };
