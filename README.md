@@ -7,29 +7,27 @@ Puedes encontrar el back-end de está app en: https://github.com/juancsr/watchfu
 # Firebase
 Puedes ver la app completamente funcional en: https://watchful-owl.firebaseapp.com
 
-## Angular CLI
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
 
-## Development server
+# ¿Cómo puedo ejecutarlo? 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+**Para que esta aplicación funcione correctamente, su API también debe estar en ejecución, reivsa [aquí](https://github.com/juancsr/watchful-owl-back-end) para ver el API**
 
-## Code scaffolding
+## Prerequisitos
+* node -> [aquí](https://nodejs.org/en/) (Yo recomiendo la versión LTS)
+* npm (usualmente viene con la instalación de node)
+* anguar / angular cli -> [aquí](https://cli.angular.io/)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Ejecución
+1. Abre la terminal de tu preferencia 
+2. Clona el proyecto `git clone https://github.com/juancsr/watchful-owl-front-end`
+3. Ve a la carpeta del proyecto `cd watchful-owl-front-end`
+4. Corre `npm install` para instalar todas las dependencias (esto puede llevar un rato)
+5. Corre `ng serve` o `npm run start`
+6. Ve a tu navegador y escribe la siguiente dirección `http://localhost:4200`
+7. (Opcional) tal vez el servicio de aylien no esté disponible por problemas de [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) si es así, corre `ng serve --open` para que el proyecto se ejecute por debajo de un proxy (el proxy ya está configurado en el purto 3000)
 
-## Build
+## Construir
 
+~Original de angular...
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
