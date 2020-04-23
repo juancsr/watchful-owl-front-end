@@ -13,7 +13,7 @@ Puedes ver la app completamente funcional en: https://watchful-owl.firebaseapp.c
 **Para que esta aplicación funcione correctamente, su API también debe estar en ejecución, reivsa [aquí](https://github.com/juancsr/watchful-owl-back-end) para ver el API**
 
 ## Prerequisitos
-* node -> [aquí](https://nodejs.org/en/) (Yo recomiendo la versión LTS)
+* NodeJS -> [aquí](https://nodejs.org/en/) (Yo recomiendo la versión LTS)
 * npm (usualmente viene con la instalación de node)
 * anguar / angular cli -> [aquí](https://cli.angular.io/)
 
@@ -29,5 +29,6 @@ Puedes ver la app completamente funcional en: https://watchful-owl.firebaseapp.c
 ## Construir
 
 ~Original de angular...
+
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
