@@ -24,7 +24,7 @@ Puedes ver la app completamente funcional en: https://watchful-owl.firebaseapp.c
 4. Corre `npm install` para instalar todas las dependencias (esto puede llevar un rato)
 5. Corre `ng serve` o `npm run start`
 6. Ve a tu navegador y escribe la siguiente dirección `http://localhost:4200`
-7. (Opcional) tal vez el servicio de aylien no esté disponible por problemas de [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) si es así, corre `ng serve --open` para que el proyecto se ejecute por debajo de un proxy (el proxy ya está configurado en el purto 3000)
+7. (Opcional) tal vez el servicio de aylien no esté disponible por problemas de [cors](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS) si es así, corre `ng serve --open` para que el proyecto se ejecute por debajo de un proxy (el proxy ya está configurado en el puerto 3000)
 
 ## Construir
 
