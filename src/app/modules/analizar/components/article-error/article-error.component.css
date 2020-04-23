@@ -1,0 +1,7 @@
+.error-container {
+    color: red;
+}
+
+.error-container > p{
+    margin: 10px;
+}

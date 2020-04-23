@@ -1,0 +1,12 @@
+.title-container {
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: Open Sans;
+  font-size: 1.2em;
+  color: #576073;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}

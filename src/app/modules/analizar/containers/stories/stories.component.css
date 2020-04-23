@@ -1,0 +1,20 @@
+.container {
+    margin-top: 5%;
+}
+
+.help-text {
+    font-size: 14px;
+    color: gray;
+    margin-bottom: 2%;
+}
+
+.button-search {
+    background-color: #4395E6;
+    max-height: 2%;
+}
+
+.section {
+    margin-bottom: 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #DCDCDC;
+}

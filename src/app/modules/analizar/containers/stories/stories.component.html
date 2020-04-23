@@ -1,0 +1,94 @@
+<!-- <app-article-search></app-article-search> -->
+
+<div class="container">
+  <div class="row center-xs" *ngIf="isLoading">
+    <app-progress-spinner></app-progress-spinner>
+  </div>
+  <div class="row center-xs" *ngIf="!isLoading">
+    <div class="col-xs-10">
+      <div class="box">
+        <mat-card>
+          <div class="row center-xs">
+            <h1 *ngIf="!analysis">
+              Analizar artículo
+            </h1>
+          </div>
+          <div class="row center-xs help-text" *ngIf="!analysis">
+            Te ayudamos a encontrar información relevante de tus artículos,<br />
+            simplemente copia y pega la URL del artículo que deseas analizar
+          </div>
+
+          <mat-card-content>
+            <form>
+              <div class="row center-xs">
+                <mat-form-field class="col-xs-8">
+                  <mat-label>Pega aquí la URL del sitio web</mat-label>
+                  <input
+                    type="text"
+                    name="url"
+                    matInput
+                    [(ngModel)]="url"
+                    placeholder="Ej: https://techcrunch.com/2019/12/22/who-will-the-winners-be-in-the-future-of-fintech/"
+                  />
+                </mat-form-field>
+              </div>
+              <button
+                type="button"
+                mat-flat-button
+                class="button-search"
+                color="primary"
+                (click)="fetchAnalysis()"
+                [disabled]="url === null"
+              >
+                Buscar
+              </button>
+            </form>
+          </mat-card-content>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row center-xs" *ngIf="analysisError">
+  <app-article-error></app-article-error>
+</div>
+
+<div class="container">
+  <div class="row center-xs" *ngIf="analysis && !isLoading">
+    <!-- Titulo -->
+    <div class="col-xs-12">
+      <div class="box">
+        <app-article-title [title]="title"></app-article-title>
+      </div>
+    </div>
+
+    <!-- Sentimientos -->
+    <div class="section col-xs-10">
+      <div class="box">
+        <app-article-sentiment
+          [sentimentValue]="sentiment"
+          [polarityDescription]="sentimentDescription"
+        ></app-article-sentiment>
+      </div>
+    </div>
+
+    <!-- Resumen -->
+    <div class="section col-xs-10">
+      <div class="box">
+        <app-article-summary
+          [summary]="summary"
+          [concepts]="analysis.concepts"
+        ></app-article-summary>
+      </div>
+
+      <!-- Categorías -->
+      <app-article-classification
+        [categories]="categories"
+      ></app-article-classification>
+      
+      <app-article-entity [entities]="analysis.entity"> </app-article-entity>
+
+    </div>
+  </div>
+</div>

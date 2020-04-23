@@ -1,0 +1,8 @@
+{
+    "/news/*": {
+        "target": "https://api.aylien.com",
+        "secure": false,
+        "logLevel": "debug",
+        "changeOrigin": true
+    }
+}

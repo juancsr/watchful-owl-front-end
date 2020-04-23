@@ -19,6 +19,15 @@ const routes: Routes = [
 
             },
             {
+                path: 'popular',
+                loadChildren: () => import('./modules/popular/popular.module').then(m => m.PopularModule)
+            },
+            {
+                path: 'analizar',
+                loadChildren: () => import('./modules/analizar/analizar.module').then(m => m.AnalizarModule)
+
+            },
+            {
                 path: 'auth',
                 loadChildren: () => import ('./modules/auth/auth.module').then(m => m.AuthModule)
             },

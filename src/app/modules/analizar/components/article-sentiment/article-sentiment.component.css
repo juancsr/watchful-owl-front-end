@@ -1,0 +1,32 @@
+.mat-progress-bar {
+    height: 20px;
+}
+
+.neutral-color::after {
+    background-color: gray !important;
+}
+
+.negative-color {
+    background-color: #A486BD !important;
+}
+
+.positive-color .mat-progress-bar-fill::after {
+    background-color: #FDA600 !important;
+}
+
+.green-progress .mat-progress-bar-fill::after {
+    background-color: green !important;
+}
+
+.title-container {
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: Open Sans;
+  font-size: 1.2em;
+  color: #576073;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 10px;
+}

@@ -15,10 +15,14 @@ import { MatListModule } from '@angular/material/list';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatStepperModule } from '@angular/material/stepper';
-import { HttpClientModule } from "@angular/common/http";
-
+import { HttpClientModule } from '@angular/common/http';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatTreeModule } from '@angular/material/tree';
+import { MatDividerModule } from '@angular/material/divider';
 @NgModule({
-    declarations: [],
+  declarations: [],
   imports: [
     MatButtonModule,
     MatToolbarModule,
@@ -36,7 +40,12 @@ import { HttpClientModule } from "@angular/common/http";
     MatSnackBarModule,
     MatFormFieldModule,
     MatStepperModule,
-    HttpClientModule
+    HttpClientModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatChipsModule,
+    MatTreeModule,
+    MatDividerModule,
   ],
   exports: [
     MatButtonModule,
@@ -54,8 +63,13 @@ import { HttpClientModule } from "@angular/common/http";
     MatListModule,
     MatSnackBarModule,
     MatFormFieldModule,
-    MatStepperModule
-  ]
+    MatStepperModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatChipsModule,
+    MatTreeModule,
+    MatDividerModule
+  ],
 })
 export class MaterialModule {}
 
